@@ -44,3 +44,12 @@ sgdc.fit(X_train,y_train)
 sgdc_y_predict=sgdc.predict(X_test)
 print lr_y_predict
 print sgdc_y_predict
+
+# page 42 -- code 16
+from sklearn.metrics import classification_report
+
+print 'Accuracy of LogisticRegression:',lr.score(X_test,y_test)
+print classification_report(y_test,lr_y_predict,target_names=['Benign','Malignant'])
+print 'Accuracy of SGDClassifier:',sgdc.score(X_test,y_test)
+print classification_report(y_test,sgdc_y_predict,target_names=['Benign','Malignant'])
+
